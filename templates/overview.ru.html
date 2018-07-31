@@ -1,0 +1,139 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-6 col-lg-8 col-xs-12">
+      <h2 style="margin-top: 0.3em; margin-bottom: 0.3em;">
+        Экосистема для веб разработки на языке Go, <br /> созданная, чтобы сделать вашу жизнь проще.
+      </h2>
+      <p style="margin-bottom: 1.4em;">
+        <a href="/ru/docs/installation" class="btn btn-primary btn-lg">Начать</a>
+      </p>
+      <p>
+        Последний релиз: <a href="https://github.com/gobuffalo/buffalo/releases" target="_blank"><strong><%= version %></strong></a><br />
+        Минимальная версия Go <strong><%= goMinVersion %>+</strong>
+      </p>
+    </div>
+    <div class="col-md-6 col-lg-4 col-sm-6 col-xs-12">
+      <img src="/assets/images/logo_med.png" alt="buffalo" class="logo-presentation" />
+    </div>
+  </div>
+</div>
+
+<h2>Основные возможности</h2>
+
+<div class="row">
+  <div class="feature">
+    <h4>
+      <i class="fa fa-road" aria-hidden="true"></i>
+      Роутинг
+    </h4>
+
+    <p>
+      Buffalo использует библиотеку <a href="https://github.com/gorilla" target="_blank">Gorilla</a> для работы с роутами, сессиями и файлами cookie... Вероятно, существуют и более быстрые роутеры, но этот определенно самый мощный!
+    </p>
+  </div>
+
+  <div class="feature">
+    <h4>
+      <i class="fa fa-th" aria-hidden="true"></i>
+      Шаблонизатор
+    </h4>
+    <p>
+      Создавайте ваши шаблоны при помощи <a href="https://github.com/gobuffalo/plush" target="_blank">Plush</a>, используя синтаксис схожий с Rails. Расширяйте базовые возможности шаблонизатора при помощи собственных расширений. А если он вам не нравится, то всегда можно использовать стандартный <code>html/template</code> или даже написать свой!
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="feature">
+    <h4>
+      <i class="fa fa-cube" aria-hidden="true"></i>
+      Инструменты Buffalo
+    </h4>
+    <p>
+      Writing a web application module <strong>always begins with the same tasks</strong>. Buffalo provides you <strong>a simple toolbox</strong>, the <code>buffalo</code> command, to generate many parts of your app and run usual tasks.
+    </p>
+    <p>
+      Extend the toolbox with plugins, using the language you want!
+    </p>
+  </div>
+  <div class="feature">
+    <h4>
+      <i class="fa fa-flask" aria-hidden="true"></i>
+      Тестирование
+    </h4>
+    <p>
+      <strong>Тестирование может быть скучной задачей</strong>, но Buffalo помогает вам <strong>в создании тестовых сценариев</strong>. Action, resource, model generators create test templates for the code you just generated.
+    </p>
+    <p>
+      You can run them all using a simple command from the toolbox.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="feature">
+    <h4>
+      <i class="fa fa-refresh" aria-hidden="true"></i>
+      "Горячая" перезагрузка
+    </h4>
+    <p>
+      Code, save, refresh. Use the <code>buffalo dev</code> command to rebuild your app, from backend to frontend, and just see the changes live!
+    </p>
+  </div>
+  <div class="feature">
+    <h4>
+      <i class="fa fa-file-image-o" aria-hidden="true"></i>
+      Frontend pipeline <span class="label label-default">Optional</span>
+    </h4>
+    <p>
+      Use the Webpack-generated configuration to build your frontend assets, so you can optimize both backend and frontend.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="feature">
+    <h4>
+      <i class="fa fa-database" aria-hidden="true"></i>
+      Модели / ORM <span class="label label-default">Опционально</span>
+    </h4>
+    <p>
+      Тесная интеграция с <a href="https://github.com/gobuffalo/pop" target="_blank">pop</a> provides a simple way to handle database and common related tasks.
+    </p>
+    <p>
+      Поддерживаемые базы данных: MySQL/ MariaDB, PostgreSQL, CockroachDB, SQLite.
+    </p>
+  </div>
+  <div class="feature">
+    <h4>
+      <i class="fa fa-cogs" aria-hidden="true"></i>
+      Фоновые воркеры / задачи <span class="label label-default">Опционально</span>
+    </h4>
+    <p>
+      If you're familiar with Rake tasks from Ruby, you'll be right at home using <a href="https://github.com/markbates/grift" target="_blank">Grift</a>. Seeding a database, running a cleaning job are now at hand!
+    </p>
+    <p>
+      Running background tasks are easy too, using the Background Workers.
+    </p>
+  </div>
+</div>
+
+<p class="get-started-btn">
+  <a href="/docs/installation" class="btn btn-primary btn-lg"><strong>Начать работу</strong> с Buffalo</a>
+</p>
+
+<%= partial("platinum_sponsors.html") %>
+
+<div class="text-center" style="margin-top: 2.5em;">
+  <h4>Используете Buffalo на работе?</h4>
+
+  <p>
+      Спросите своего менеджера или маркетинговую команду, помогут ли они <a href="/sponsors">поддержать</a> наш проект.
+  </p>
+
+  <p>
+      <a href="http://patreon.com/buffalo" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Become a Patreon</a>
+  </p>
+</div>
+
+<h2>Discover Buffalo on video</h2>
+
+<%= partial("docs/youtube.html") %>
+

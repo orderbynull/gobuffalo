@@ -20,6 +20,7 @@ var app *buffalo.App
 var supportedLanguages = map[string]string{
 	"en": "English",
 	"fr": "Français",
+	"ru": "Русский",
 }
 
 // T is used to provide translations
@@ -86,12 +87,12 @@ func App() *buffalo.App {
 			return c.Redirect(302, fmt.Sprintf("/%s", c.Value("lang").(string)))
 		})
 
-		app.GET("/{lang:fr|en}/search", Search)
-		app.GET("/{lang:fr|en}/docs/{name:.+}", Docs)
+		app.GET("/{lang:fr|en|ru}/search", Search)
+		app.GET("/{lang:fr|en|ru}/docs/{name:.+}", Docs)
 
 		app.POST("/lang", ChangeLanguage)
-		app.GET("/{lang:fr|en}/sponsors", Sponsors)
-		app.GET("/{lang:fr|en}/", HomeHandler)
+		app.GET("/{lang:fr|en|ru}/sponsors", Sponsors)
+		app.GET("/{lang:fr|en|ru}/", HomeHandler)
 
 		app.ServeFiles("/", assetBox)
 
